@@ -13,15 +13,3 @@ It is your task to implement the `currency-selector` component's logic which imp
 - When the user selects a `Currency` from the `<select>` tag, an `onSelect` event with the selected `Currency` object should be emitted.
 
 When you implement that logic, tests from the `currency-calculator.component.spec.ts` suite should pass.
-
-# Setup
-
-Follow these steps if you are using a zip/git mode (i.e. not available inside the Devskiller in-browser IDE):
-
-1. `npm install` – install dependencies.
-2. `npm start` - run a dev server, open your browser on http://localhost:4200/.
-3. `npm test` – run all tests once (this will be used to evaluate your solutions).
-4. `npm run test:watch` - run all tests in the _watch mode_ (optionally, you can use it locally if you prefer).
-
-## Good luck!
-
