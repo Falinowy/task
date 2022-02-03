@@ -8,9 +8,4 @@ import { currencies } from '../model/currencies';
 })
 export class CurrencySelectorComponent {
   @Input() currencies: Currency[] = currencies();
-  public selecedCurrency: any;
-
-  onSelect(value) {
-  this.selecedCurrency = JSON.parse(value);
-}
 }

@@ -10,23 +10,21 @@ import { currencies } from '../model/currencies';
 export class CurrencyCalculatorComponent {
   public result: number;
   public amount: number = 100;
-  public currency: Currency;
+  public currency: Currency = {
+    code: 'USD',
+    conversionRateToUSD: 1
+  };
   public currencies: Currency[] = currencies();
   public selecedCurrency: any;
 
   public newAmount(amount: number): void {
     this.amount = amount;
-    console.log(this.currency);
-    if (this.currency) {
-      this.currency.conversionRateToUSD = 1;
-    }
-
     this.calculateResult();
   }
 
   public newCurrency(value): void {
-      this.currency = JSON.parse(value);
-      this.calculateResult();
+    this.currency = JSON.parse(value);
+    this.calculateResult();
   }
 
   public calculateResult() {
