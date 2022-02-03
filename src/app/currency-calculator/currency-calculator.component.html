@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col">
+    <span *ngIf="currency">{{currency.code}}</span>
+    <input type="number" [(ngModel)]="amount" (ngModelChange)="newAmount($event)">
+    <app-currency-selector
+      (change)="newCurrency($event.target.value)"
+      [currencies]="currencies"></app-currency-selector>
+    <span *ngIf="result">is <span id="result">{{result}}</span>USD</span>
+  </div>
+</div>
+
